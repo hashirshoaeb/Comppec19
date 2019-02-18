@@ -129,7 +129,28 @@
 
 /* mine */
 .display-5 {
-  font-size: 2rem;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
   line-height: 1.2;
 }
+
+.display-4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30.03pt;
+  font-weight: bold;
+}
+
+.col-md-10
+{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+}
+
+.card-text
+{
+  font-family: 'Roboto', sans-serif;
+  font-size: 13pt;
+  font-style: italic;
+  color: #848188;
+}
+
