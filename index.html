@@ -335,5 +335,104 @@
       <strong>&copy; 2019 </strong> Department of Computer and Software Engineering NUST Collage of Electrical and Mechanical Engineering 
     </footer>
     <!-- Footer -->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#btnRegisterModal">
+      Register
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="btnRegisterModal" tabindex="-1" role="dialog" aria-labelledby="firstModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="firstModalLabel">REGISTRATION FORM</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+							<div class=" form-group">
+								<label for="inputTeamName">Team Name</label>
+    						<input type="text" class="form-control" id="inputTeamName" placeholder="Titan"/>
+							</div>
+							<div class="form-group">
+								<label for="controlCategory">Category</label>
+								<select class="form-control" id="controlCategory">
+									<option>ELECTROMECHANICAL SYSTEM</option>
+									<option>AR/VR & GAMING</option>
+									<option>IOT & DIGITAL SYSTEM</option>
+									<option>SOFTWARE SYSTEM</option>
+									<option>EARLY AGE PROGRAMMING</option>
+								</select>
+							</div>
+							<div class=" form-group">
+								<label> Team Members</label>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"/>
+									<label class="form-check-label" for="inlineRadio1">1</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"/>
+									<label class="form-check-label" for="inlineRadio2">2</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"/>
+									<label class="form-check-label" for="inlineRadio3">3</label>
+								</div>
+							</div>
+						</form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#btnRegisterModal2" >Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#btnRegisterModal2">
+      Launch demo modal 2
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="btnRegisterModal2" tabindex="-1" role="dialog" aria-labelledby="secondModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="secondModalLabel">REGISTRATION FORM</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class=" row">
+							<div class=" col-md-4">
+									<form>
+											<div class="form-group">
+												<label for="inputMemberName">Member Name</label>
+												<input type="text" class="form-control" id="inputMemberName" placeholder="Name">
+											</div>
+											<div class="form-group">
+												<label for="inputCNIC">CNIC</label>
+												<input type="text" class="form-control" id="inputCNIC" placeholder="00000-0000000-0">
+											</div>
+											<div class="form-group">
+												<label for="inputPhoneNumber">Phone Number</label>
+												<input type="text" class="form-control" id="inputPhoneNumber" placeholder="0000-0000000">
+											</div>
+									</form>
+							</div>
+						</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
