@@ -74,7 +74,7 @@
           </span>
         </div>
           <div>
-              <button class=" btn btn-default btn-outline-light btn-lg">Registration opening soon</button>
+              <button type="button" class=" btn btn-default btn-outline-light btn-lg" data-toggle="modal" data-target="#btnRegisterModal">Registration opening soon</button>             
           </div>
       </div>
     </div>
@@ -229,8 +229,8 @@
       
       <div class=" row justify-content-center">
         <div class=" col-md-3">
-          <a href="https://www.carepvtltd.com/">
-              <img style="width: 18rem;padding-left:50px;" class=" img-fluid mb-5" src="img/CARE.png"></img>
+          <a href="https://www.graana.com/">
+              <img style="width: 18rem;padding-left:50px;" class=" img-fluid mb-5" src="img/GR.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
@@ -240,7 +240,7 @@
         </div>
         <div class=" col-md-3">
           <a href="http://highrise.com.pk/">    
-              <img style="width: 18rem;align-content: center;padding-left: 70px;" class=" img-fluid mb-5" src="img/Webp.net-resizeimage.png"></img>
+              <img style="width: 18rem;align-content: center;padding-left: 50px;" class=" img-fluid mb-5" src="img/Webp.net-resizeimage.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
@@ -249,6 +249,18 @@
                 height: 150px;"
                  class=" img-fluid mb-5" src="img/PASTIC Final-Logo.png"></img>
             </a>
+        </div>
+        <div class=" col-md-3">
+          <a href="">    
+              <img style="width: 18rem; align-content: center;"
+               class=" img-fluid mb-5" src="img/HRPL.png"></img>
+          </a>
+        </div>
+        <div class=" col-md-3">
+          <a href="">    
+              <img style="width: 18rem; align-content: center;"
+               class=" img-fluid mb-5" src="img/HRPL.png"></img>
+          </a>
         </div>
       </div> 
     </div>
@@ -336,103 +348,329 @@
     </footer>
     <!-- Footer -->
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#btnRegisterModal">
-      Register
-    </button>
+    <form method="post" action="">
+      <!-- Button trigger modal -->
+      <!-- <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#btnRegisterModal"
+      >
+        Register
+      </button> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="btnRegisterModal" tabindex="-1" role="dialog" aria-labelledby="firstModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="firstModalLabel">REGISTRATION FORM</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-							<div class=" form-group">
-								<label for="inputTeamName">Team Name</label>
-    						<input type="text" class="form-control" id="inputTeamName" placeholder="Titan"/>
-							</div>
-							<div class="form-group">
-								<label for="controlCategory">Category</label>
-								<select class="form-control" id="controlCategory">
-									<option>ELECTROMECHANICAL SYSTEM</option>
-									<option>AR/VR & GAMING</option>
-									<option>IOT & DIGITAL SYSTEM</option>
-									<option>SOFTWARE SYSTEM</option>
-									<option>EARLY AGE PROGRAMMING</option>
-								</select>
-							</div>
-							<div class=" form-group">
-								<label> Team Members</label>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"/>
-									<label class="form-check-label" for="inlineRadio1">1</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"/>
-									<label class="form-check-label" for="inlineRadio2">2</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"/>
-									<label class="form-check-label" for="inlineRadio3">3</label>
-								</div>
-							</div>
-						</form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#btnRegisterModal2" >Next</button>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="btnRegisterModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="firstModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="firstModalLabel">
+                REGISTRATION FORM
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            
+                <div class=" form-group">
+                  <label for="inputTeamName">Team Name</label>
+                  <input
+                    type="text"
+                    name="teamName"
+                    class="form-control"
+                    id="inputTeamName"
+                    placeholder="Titan"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputTeamEmail">Email address</label>
+                  <input 
+                    type="email" 
+                    name="teamEmail"
+                    class="form-control" 
+                    id="inputTeamEmail"
+                    placeholder="name@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="controlCategory">Category</label>
+                  <select name="teamcategory" class="form-control" id="controlCategory">
+                    <option value="1">ELECTROMECHANICAL SYSTEM</option>
+                    <option value="2">AR/VR & GAMING</option>
+                    <option value="3">IOT & DIGITAL SYSTEM</option>
+                    <option value="4">SOFTWARE SYSTEM</option>
+                    <option value="5">EARLY AGE PROGRAMMING</option>
+                  </select>
+                </div>
+                <div class=" form-group">
+                  <label> Team Members</label>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="teamMemberNo"
+                      id="inlineRadio1"
+                      value="1"
+                      checked
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="teamMemberNo"
+                      id="inlineRadio2"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="teamMemberNo"
+                      id="inlineRadio3"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                </div>
+           
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+                data-toggle="modal"
+                data-target="#btnRegisterModal2"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#btnRegisterModal2">
-      Launch demo modal 2
-    </button>
+      <!-- Button trigger modal -->
+      <!-- <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#btnRegisterModal2"
+      >
+        Launch demo modal 2
+      </button> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="btnRegisterModal2" tabindex="-1" role="dialog" aria-labelledby="secondModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="secondModalLabel">REGISTRATION FORM</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class=" row">
-							<div class=" col-md-4">
-									<form>
-											<div class="form-group">
-												<label for="inputMemberName">Member Name</label>
-												<input type="text" class="form-control" id="inputMemberName" placeholder="Name">
-											</div>
-											<div class="form-group">
-												<label for="inputCNIC">CNIC</label>
-												<input type="text" class="form-control" id="inputCNIC" placeholder="00000-0000000-0">
-											</div>
-											<div class="form-group">
-												<label for="inputPhoneNumber">Phone Number</label>
-												<input type="text" class="form-control" id="inputPhoneNumber" placeholder="0000-0000000">
-											</div>
-									</form>
-							</div>
-						</div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="btnRegisterModal2"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="secondModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-lg"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="secondModalLabel">
+                REGISTRATION FORM
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+           
+              <div class="modal-body">
+                <div class=" row">
+                  <?php for ($i=0; $i < 3; $i++) { ?>
+                  <div class=" col-md-4">
+                    <div class="form-group">
+                      <label for="inputMemberName">Member Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="memberName<?php echo $i;?>"
+                        id="inputMemberName"
+                        placeholder="Name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="inputCNIC">CNIC</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="memberCNIC<?php echo $i;?>"
+                        id="inputCNIC"
+                        placeholder="00000-0000000-0"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPhoneNumber">Phone Number</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="memberPhone<?php echo $i;?>"
+                        id="inputPhoneNumber"
+                        placeholder="0000-0000000"
+                      />
+                    </div>
+                  </div>
+                  <?php } ?>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  name="btnSubmit"
+                  type="submit"
+                  class="btn btn-primary"
+                  value="submit"
+                >
+                  Submit
+                </button>
+              </div>
+         
           </div>
         </div>
       </div>
-    </div>
+    </form>
+
+    <?php
+
+    if(isset($_POST['btnSubmit'])) {
+      // taking input to variables
+      $teamName = $_POST['teamName'];
+      $teamEmail = $_POST['teamEmail'];
+      $teamcategory = $_POST['teamcategory'];
+      $teamMemberNo = $_POST['teamMemberNo'];
+      $memberNames = array();
+      $memberCNICs = array();
+      $memberPhones = array();
+
+      for ($i=0; $i < $teamMemberNo; $i++) { 
+        array_push($memberNames, $_POST['memberName'.$i]);
+        array_push($memberCNICs, $_POST['memberCNIC'.$i]);
+        array_push($memberPhones, $_POST['memberPhone'.$i]);
+      }
+
+      // incomplete form validation
+      function errAlert($msg) {
+        echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+      }
+      if(empty($teamName)){
+       errAlert("You have not entered team name in form. Registration Failed");
+       exit; 
+      }
+      if(empty($teamEmail)){
+        errAlert("You have not entered team Email in form. Registration Failed");
+        exit; 
+       }
+      if(empty($teamcategory)){
+        errAlert("You have not selected team category in form. Registration Failed");
+        exit;
+      }
+      if(empty($teamMemberNo)){
+        errAlert("You have not selected number of team members in form. Registration Failed");
+        exit;
+      }
+      for ($i=0; $i < 3; $i++) { 
+        if($teamMemberNo == $i + 1){
+          $chr = array("first", "second", "third");
+          if(empty($memberNames[$i]) || empty($memberCNICs[$i]) || empty($memberPhones[$i])){
+            errAlert("Please input data for " . $chr[$i] . " team member. Registration Failed");
+            exit;
+          }
+        }
+      }
+      
+      // conntection
+      $host = '127.0.0.1';
+      $dbname = 'db_comppec19';
+      $username = 'root';
+      $password = '';
+      $conn = null;
+      try {
+        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        echo "Connected to $dbname at $host successfully.";
+      } catch (PDOException $pe) {
+        die("Could not connect to the database $dbname :" . $pe->getMessage());
+        exit;
+      }
+
+      $sql0 = "SELECT team_id FROM tbl_team WHERE team_Email = '$teamEmail'";
+      $teamid = $conn->query($sql0)->fetch();
+      if(isset($teamid['team_id'])){
+        echo "team already registered";
+        exit;
+      }
+
+      $sql = "INSERT INTO tbl_team (team_name, team_Email, team_category, no_of_members) VALUES ('$teamName','$teamEmail',$teamcategory,$teamMemberNo)";
+      if(!$conn->query($sql)){
+        echo "sql query NOT successful";
+        exit;
+      }
+
+      $sql1 = "SELECT team_id FROM tbl_team WHERE team_name = '$teamName' and team_Email = '$teamEmail'";
+      $teamid = $conn->query($sql1)->fetch();
+      if(empty($teamid)){
+        echo "team id is empty";
+        exit;
+      }
+      //while ($teamid = $value->fetch()) {
+      //   echo $teamid['team_id'] ."hahah";
+      //}
+      $team_id = $teamid['team_id'];
+      for ($i=0; $i < $teamMemberNo; $i++) { 
+        $sql2 = "INSERT INTO tbl_member (member_name, member_CNIC, member_phone, team_id) VALUES ('$memberNames[$i]','$memberCNICs[$i]',$memberPhones[$i], $team_id)";
+        if(!$conn->query($sql2)){
+          echo "sql2 query NOT successful";
+          exit;
+        }
+      }
+
+      echo "Registration SUCCESSFULL";
+    }
+
+
+    ?>  
+  
+    
   </body>
 </html>
