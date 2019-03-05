@@ -217,7 +217,7 @@
     <!-- Our Team -->
     <!-- Our Sponsors -->
     <div style="background : #343434;" class=" jumbotron jumbotron-fluid">
-      <div  class=" container-fluid text-center text-light">
+      <div  class=" container text-center text-light">
         <div>
           <h1 class=" display-4">OUR SPONSORS</h1>
         </div>
@@ -230,36 +230,36 @@
       <div class=" row justify-content-center">
         <div class=" col-md-3">
           <a href="https://www.graana.com/">
-              <img style="width: 18rem;padding-left:50px;" class=" img-fluid mb-5" src="img/GR.png"></img>
+              <img style="width: 18rem;align-content: center;width: 170px;
+                height: 150px;" class=" img-fluid mb-5" src="img/pastic.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
           <a href="https://diceanalytics.pk/">
-              <img style="width: 18rem;padding-left:50px;" class=" img-fluid mb-5" src="img/rsz_dice_analytics.png"></img>
+              <img style="width: 18rem;" class=" img-fluid mb-5" src="img/HRPL.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
           <a href="http://highrise.com.pk/">    
-              <img style="width: 18rem;align-content: center;padding-left: 50px;" class=" img-fluid mb-5" src="img/Webp.net-resizeimage.png"></img>
+              <img style="width: 18rem;align-content: center;" class=" img-fluid mb-5" src="img/RWR.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
             <a href="http://www.pastic.gov.pk/">    
-                <img style="width: 18rem;align-content: center;width: 170px;
-                height: 150px;"
-                 class=" img-fluid mb-5" src="img/PASTIC Final-Logo.png"></img>
+                <img style="width: 18rem;align-content: center;"
+                 class=" img-fluid mb-5" src="img/duce.png"></img>
             </a>
         </div>
         <div class=" col-md-3">
           <a href="">    
               <img style="width: 18rem; align-content: center;"
-               class=" img-fluid mb-5" src="img/HRPL.png"></img>
+               class=" img-fluid mb-1" src="img/GR.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
           <a href="">    
-              <img style="width: 18rem; align-content: center;"
-               class=" img-fluid mb-5" src="img/HRPL.png"></img>
+              <img style="width: 18rem; align-content: center; padding-top: 60px;"
+               class=" img-fluid mt-5" src="img/PS.png"></img>
           </a>
         </div>
       </div> 
