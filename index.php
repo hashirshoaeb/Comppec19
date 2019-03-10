@@ -191,9 +191,9 @@
       $pdf->Cell(100,10,"RegistrationFEE:         Rs1000",0,0);
       $pdf->Cell(100,10,"RegistrationFEE:         Rs1000",0,0);
       $pdf->Cell(100,10,"RegistrationFEE:         Rs1000",0,1);
-      $pdf->Cell(100,10,"BankInfo:{}",0,0);
-      $pdf->Cell(100,10,"BankInfo:{}",0,0);
-      $pdf->Cell(100,10,"BankInfo:{}",0,1);
+      $pdf->Cell(100,10,"BankInfo:",0,0);
+      $pdf->Cell(100,10,"BankInfo:",0,0);
+      $pdf->Cell(100,10,"BankInfo:",0,1);
       $pdf->Cell(100,10,"Title:{$F_BankTitle}",0,0);
       $pdf->Cell(100,10,"Title:{$F_BankTitle}",0,0);
       $pdf->Cell(100,10,"Title:{$F_BankTitle}",0,1);
