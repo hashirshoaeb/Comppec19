@@ -354,13 +354,13 @@
       </div>
     <!-- Prizes -->
     <!-- Our Team -->
-    <div style="background : white;" class=" jumbotron jumbotron-fluid">
-        <div class=" container-fluid text-center">
+    <div style="background : #343434;" class=" jumbotron jumbotron-fluid">
+        <div class=" container-fluid text-center text-light">
             <div>
-              <h1 style="color: #343434;" class=" display-4">MEET OUR TEAM</h1>
+              <h1 class=" display-4">MEET OUR TEAM</h1>
             </div>
             <div>
-                <span style="font-size: 2em; color: #00adb4;">
+                <span style="font-size: 2em; color: #f7b500;">
                     <i class="fas fa-minus"></i>
                 </span>
             </div>
@@ -413,7 +413,7 @@
               </div>
               <div>
                   <a href="#demo"  data-toggle="collapse">
-                    <span style="font-size: 2em; color: black;">
+                    <span style="font-size: 2em; color: #f7b500;">
                       <i class="fas fa-chevron-circle-down"></i>
                     </span>
                   </a>
@@ -423,38 +423,38 @@
     </div>
     <!-- Our Team -->
     <!-- Our Sponsors -->
-    <div style="background : #343434;" class=" jumbotron jumbotron-fluid">
-      <div  class=" container text-center text-light">
+    <div style="background : white;" class=" jumbotron jumbotron-fluid">
+      <div  class=" container text-center">
         <div>
           <h1 class=" display-4">OUR SPONSORS</h1>
         </div>
         <div>
-          <span style="font-size: 2em; color: #f7b500;">
+          <span style="font-size: 2em; color: #00adb4;">
             <i class="fas fa-minus"></i>
           </span>
         </div>
       
       <div class=" row justify-content-center">
         <div class=" col-md-3">
-          <a href="https://www.graana.com/">
+          <a href="">
               <img style="width: 18rem;align-content: center;width: 170px;
                 height: 150px;" class=" img-fluid mb-5" src="img/pastic.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
-          <a href="https://diceanalytics.pk/">
+          <a href="">
               <img style="width: 18rem;" class=" img-fluid mb-5" src="img/HRPL.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
-          <a href="http://highrise.com.pk/">    
+          <a href="">    
               <img style="width: 18rem;align-content: center;" class=" img-fluid mb-5" src="img/RWR.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
-            <a href="http://www.pastic.gov.pk/">    
+            <a href="">    
                 <img style="width: 18rem;align-content: center;"
-                 class=" img-fluid mb-5" src="img/duce.png"></img>
+                 class=" img-fluid mb-5" src="img/MM.jpg"></img>
             </a>
         </div>
         <div class=" col-md-3">
@@ -474,7 +474,7 @@
   </div>
     <!-- Our Sponsors -->
     <!-- Footer -->
-    <div id="Contact" style="background : white;" class=" jumbotron jumbotron-fluid">
+    <div id="Contact" style="background : #f5f5f5;" class=" jumbotron jumbotron-fluid mb-0">
       <div class=" container">
         <div class=" text-center">
           <h1 style="color: #343434;" class=" display-4">CONTACT US</h1>
@@ -835,143 +835,4 @@
 </html>
 <?php
  }
-?> 
-
-    <?php
-      
-   
-// $_SESSION["a"]="value 1";
-// $_SESSION["b"]="value 2";
-// '<br /><a href="pdf1.php">page 2</a>';
-
-      // taking input to variables
-      // $teamName = $_POST['teamName'];
-      // $teamEmail = $_POST['teamEmail'];
-      // $teamcategory = $_POST['teamcategory'];
-      // $teamProjectDetails = $_POST["teamProjectDetails"];
-      // $teamMemberNo = $_POST['teamMemberNo'];
-      // $teamInstituteName = $_POST["teamInstituteName"];
-      // $teamCityName = $_POST["teamCityName"];
-      // $teamAccomodation = $_POST["teamAccomodation"];
-      // $memberNames = array();
-      // $memberCNICs = array();
-      // $memberPhones = array();
-      
-      // for ($i=0; $i < $teamMemberNo; $i++) { 
-      //   array_push($memberNames, $_POST['memberName'.$i]);
-      //   array_push($memberCNICs, $_POST['memberCNIC'.$i]);
-      //   array_push($memberPhones, $_POST['memberPhone'.$i]);
-      // }
-
-      // // incomplete form validation
-      // function errAlert($msg) {
-      //   echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-      // }
-      // if(empty($teamName)){
-      //  errAlert("You have not entered team name in form. Registration Failed");
-      //  exit; 
-      // }
-      // if(empty($teamEmail)){
-      //   errAlert("You have not entered team Email in form. Registration Failed");
-      //   exit; 
-      //  }
-      // if(empty($teamcategory)){
-      //   errAlert("You have not selected team category in form. Registration Failed");
-      //   exit;
-      // }
-      // if(empty($teamMemberNo)){
-      //   errAlert("You have not selected number of team members in form. Registration Failed");
-      //   exit;
-      // }
-      // if(empty($teamInstituteName)){
-      //   errAlert("You have not entered your institute name in form. Registration Failed");
-      //   exit;
-      // }
-      // if(empty($teamCityName)){
-      //   errAlert("You have not entered your city name in form. Registration Failed");
-      //   exit;
-      // }
-
-      // for ($i=0; $i < 3; $i++) { 
-      //   if($teamMemberNo == $i + 1){
-      //     $chr = array("first", "second", "third");
-      //     if(empty($memberNames[$i]) || empty($memberCNICs[$i]) || empty($memberPhones[$i])){
-      //       errAlert("Please input data for " . $chr[$i] . " team member. Registration Failed");
-      //       exit;
-      //     }
-      //   }
-      // }
-      
-      // // conntection
-      // $host = '127.0.0.1';
-      // $dbname = 'db_comppec19';
-      // $username = 'root';
-      // $password = '';
-      // $conn = null;
-      // try {
-      //   $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-      //   echo "Connected to $dbname at $host successfully.";
-      // } catch (PDOException $pe) {
-      //   die("Could not connect to the database $dbname :" . $pe->getMessage());
-      //   exit;
-      // }
-
-      // $sql0 = "SELECT team_id FROM tbl_team WHERE team_Email = '$teamEmail'";
-      // $teamid = $conn->query($sql0)->fetch();
-      // if(isset($teamid['team_id'])){
-      //   errAlert("team already registered");
-      //   exit;
-      // }
-
-      // $sql = "INSERT INTO tbl_team (team_name, team_Email, team_category, team_projectDetail, no_of_members, team_istitute, team_city, team_accomodation) VALUES ('$teamName','$teamEmail',$teamcategory,'$teamProjectDetails',$teamMemberNo, '$teamInstituteName', '$teamCityName', $teamAccomodation)";
-      // if(!$conn->query($sql)){
-      //   errAlert("Inserting team sql query NOT successful");
-      //   exit;
-      // }
-
-      // $sql1 = "SELECT team_id FROM tbl_team WHERE team_name = '$teamName' and team_Email = '$teamEmail'";
-      // $teamid = $conn->query($sql1)->fetch();
-      // if(empty($teamid)){
-      //   errAlert ("team id is empty");
-      //   exit;
-      // }
-      // //while ($teamid = $value->fetch()) {
-      // //   echo $teamid['team_id'] ."hahah";
-      // //}
-      // $team_id = $teamid['team_id'];
-      // for ($i=0; $i < $teamMemberNo; $i++) { 
-      //   $sql2 = "INSERT INTO tbl_member (member_name, member_CNIC, member_phone, team_id) VALUES ('$memberNames[$i]','$memberCNICs[$i]','$memberPhones[$i]', $team_id)";
-      //   if(!$conn->query($sql2)){
-      //     errAlert("Inserting Members sql2 query NOT successful");
-      //     exit;
-      //   }
-      // }
-
-      // echo "Registration SUCCESSFULL";
-    
-
-
-    //  pdf challan data
-    // $F_challanNo = date('mYd') . $team_id;
-    // $F_date = date("Y-m-d");
-    // $F_leaderName = $memberNames[0];
-    // $F_projectId = $team_id;
-    // $F_projectTitle = $teamName;
-    // $F_regFee = "1000Rs";
-    // $F_BankDetails = "here is details of bank TITLE AND NUMBER";
-    // $F_BankTitle = "bank title";
-    // $F_AccountNo = "account no";
-    // echo("challan no: $F_challanNo, 
-    // date: $F_date,
-    // leader name: $F_leaderName,
-    // project id: $F_projectId,
-    // project title: $F_projectTitle,
-    // regfee: $F_regFee,
-    // bank details: $F_BankDetails");
-    
- 
-    ?>  
-
-    
-  <!-- </body>
-</html> -->
+?>
