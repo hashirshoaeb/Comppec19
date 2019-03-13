@@ -110,14 +110,18 @@
       
       //pdf challan data
       $F_challanNo = date('mYd') . $team_id;
-      $F_date = date("Y-m-d");
+      $nextWeek = time() + (7 * 24 * 60 * 60);
+      $F_date = date("Y-m-d", $nextWeek);
       $F_leaderName = $memberNames[0];
       $F_projectId = $team_id;
       $F_projectTitle = $teamName;
-      $F_regFee = "1000Rs";
+      $F_regFee = "1000 Rs";
+      if ($teamcategory == 5){ // early age programming
+        $F_regFee = "200 Rs";
+      }
       $F_BankDetails = "here is details of bank TITLE AND NUMBER";
-      $F_BankTitle = "bank title";
-      $F_AccountNo = "account no";
+      $F_BankTitle = "Emerging Technical Lab";
+      $F_AccountNo = " 0000044348";
       // echo("challan no: $F_challanNo, 
       // date: $F_date,
       // leader name: $F_leaderName,
@@ -140,12 +144,12 @@
           $this->Cell(40,10,'BankCopy',0,0);
           $this->Cell(55);
           $this->Cell(40,10,'StudentCopy',0,0);
-          $this->Image('img/iot.png',10,10,10);
-          $this->Image('img/iot.png',70,10,10);
-          $this->Image('img/iot.png',110,10,10);
-          $this->Image('img/iot.png',170,10,10);
-          $this->Image('img/iot.png',210,10,10);
-          $this->Image('img/iot.png',270,10,10);
+          $this->Image('img/NUST_Vector.png',10,10,10);
+          $this->Image('img/FooterLogo.png',70,10,10);
+          $this->Image('img/NUST_Vector.png',110,10,10);
+          $this->Image('img/FooterLogo.png',170,10,10);
+          $this->Image('img/NUST_Vector.png',210,10,10);
+          $this->Image('img/FooterLogo.png',270,10,10);
           $this->Ln(10);
         }
         
@@ -173,33 +177,33 @@
       $pdf->Rect(200, 5, 95, 65, 'D');
       $pdf->Rect(200, 70, 95, 10, 'D');
       $pdf->Rect(200, 80, 95, 30, 'D');
-      $pdf->Cell(100,10,"Challanno:{$F_challanNo}",0,0);
-      $pdf->Cell(100,10,"Challanno:{$F_challanNo}",0,0);
-      $pdf->Cell(100,10,"Challanno:{$F_challanNo}",0,1);
-      $pdf->Cell(100,10,"Date:{$F_date}",0,0);
-      $pdf->Cell(100,10,"Date:{$F_date}",0,0);
-      $pdf->Cell(100,10,"Date:{$F_date}",0,1);
-      $pdf->Cell(100,10,"Leadername:{$F_leaderName}",0,0);
-      $pdf->Cell(100,10,"Leadername:{$F_leaderName}",0,0);
-      $pdf->Cell(100,10,"Leadername:{$F_leaderName}",0,1);
-      $pdf->Cell(100,10,"ProjectId:{$F_projectId}",0,0);
-      $pdf->Cell(100,10,"ProjectId:{$F_projectId}",0,0);
-      $pdf->Cell(100,10,"ProjectId:{$F_projectId}",0,1);
-      $pdf->Cell(100,10,"ProjectTitle:{$F_projectTitle}",0,0);
-      $pdf->Cell(100,10,"ProjectTitle:{$F_projectTitle}",0,0);
-      $pdf->Cell(100,10,"ProjectTitle:{$F_projectTitle}",0,1);
-      $pdf->Cell(100,10,"RegistrationFEE:         Rs1000",0,0);
-      $pdf->Cell(100,10,"RegistrationFEE:         Rs1000",0,0);
-      $pdf->Cell(100,10,"RegistrationFEE:         Rs1000",0,1);
-      $pdf->Cell(100,10,"BankInfo:{}",0,0);
-      $pdf->Cell(100,10,"BankInfo:{}",0,0);
-      $pdf->Cell(100,10,"BankInfo:{}",0,1);
-      $pdf->Cell(100,10,"Title:{$F_BankTitle}",0,0);
-      $pdf->Cell(100,10,"Title:{$F_BankTitle}",0,0);
-      $pdf->Cell(100,10,"Title:{$F_BankTitle}",0,1);
-      $pdf->Cell(100,10,"AccountNo:{$F_AccountNo}",0,0);
-      $pdf->Cell(100,10,"AccountNo:{$F_AccountNo}",0,0);
-      $pdf->Cell(100,10,"AccountNo:{$F_AccountNo}",0,1);
+      $pdf->Cell(100,10,"Challanno: {$F_challanNo}",0,0);
+      $pdf->Cell(100,10,"Challanno: {$F_challanNo}",0,0);
+      $pdf->Cell(100,10,"Challanno: {$F_challanNo}",0,1);
+      $pdf->Cell(100,10,"Date: {$F_date}",0,0);
+      $pdf->Cell(100,10,"Date: {$F_date}",0,0);
+      $pdf->Cell(100,10,"Date: {$F_date}",0,1);
+      $pdf->Cell(100,10,"Leadername: {$F_leaderName}",0,0);
+      $pdf->Cell(100,10,"Leadername: {$F_leaderName}",0,0);
+      $pdf->Cell(100,10,"Leadername: {$F_leaderName}",0,1);
+      $pdf->Cell(100,10,"ProjectId: {$F_projectId}",0,0);
+      $pdf->Cell(100,10,"ProjectId: {$F_projectId}",0,0);
+      $pdf->Cell(100,10,"ProjectId: {$F_projectId}",0,1);
+      $pdf->Cell(100,10,"ProjectTitle: {$F_projectTitle}",0,0);
+      $pdf->Cell(100,10,"ProjectTitle: {$F_projectTitle}",0,0);
+      $pdf->Cell(100,10,"ProjectTitle: {$F_projectTitle}",0,1);
+      $pdf->Cell(100,10,"RegistrationFEE:         {$F_regFee}",0,0);
+      $pdf->Cell(100,10,"RegistrationFEE:         {$F_regFee}",0,0);
+      $pdf->Cell(100,10,"RegistrationFEE:         {$F_regFee}",0,1);
+      $pdf->Cell(100,10,"BankInfo:",0,0);
+      $pdf->Cell(100,10,"BankInfo:",0,0);
+      $pdf->Cell(100,10,"BankInfo:",0,1);
+      $pdf->Cell(100,10,"Title: {$F_BankTitle}",0,0);
+      $pdf->Cell(100,10,"Title: {$F_BankTitle}",0,0);
+      $pdf->Cell(100,10,"Title: {$F_BankTitle}",0,1);
+      $pdf->Cell(100,10,"AccountNo: {$F_AccountNo}",0,0);
+      $pdf->Cell(100,10,"AccountNo: {$F_AccountNo}",0,0);
+      $pdf->Cell(100,10,"AccountNo: {$F_AccountNo}",0,1);
       $pdf->Output();            
   }
   else{
@@ -463,10 +467,18 @@
                class=" img-fluid mb-1" src="img/GR.png"></img>
           </a>
         </div>
+        
+        
         <div class=" col-md-3">
           <a href="">    
               <img style="width: 18rem; align-content: center; padding-top: 60px;"
                class=" img-fluid mt-5" src="img/PS.png"></img>
+          </a>
+        </div>
+        <div class=" col-md-3">
+          <a href="">    
+              <img style="width: 18rem; align-content: center;padding-top:70px;"
+               class=" img-fluid mb-1" src="img/duce.png"></img>
           </a>
         </div>
       </div> 
