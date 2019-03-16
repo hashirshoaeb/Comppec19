@@ -204,7 +204,28 @@
       $pdf->Cell(100,10,"AccountNo: {$F_AccountNo}",0,0);
       $pdf->Cell(100,10,"AccountNo: {$F_AccountNo}",0,0);
       $pdf->Cell(100,10,"AccountNo: {$F_AccountNo}",0,1);
-      $pdf->Output();            
+      $doc = $pdf->Output('S'); 
+      $mailSub = "COMPPEC"; 
+      // $mailMsg1 = "thank you for registeration";
+      require 'mailAttachments/PHPMailerAutoload.php';
+      $mail = new PHPMailer();
+      $mail ->IsSmtp();
+      $mail ->SMTPDebug = 0;
+      $mail ->SMTPAuth = true;
+      $mail ->SMTPSecure = 'ssl';
+      $mail ->Host = "smtp.gmail.com";
+      $mail ->Port = 465; // or 587
+      $mail ->IsHTML(true);
+      $mail ->Username = "saadn9978@gmail.com";
+      $mail ->Password = "naeembhatti";
+      $mail ->SetFrom("saadn9978@gmail.com");
+      $mailto = "hashirshoaeb@gmail.com";
+      $mail ->Subject = $mailSub;
+      $mail ->Body = "mailMsg1";     
+      $mail ->AddAddress($mailto);
+      $mail->AddStringAttachment($doc, 'doc.pdf', 'base64', 'application/pdf');
+      $mail->Send();
+         
   }
   else{
 ?>
