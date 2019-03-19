@@ -555,7 +555,7 @@
     </footer>
     <!-- Footer -->
 
-    <form method="post" action="">
+    <form name="theform" method="post">
       <!-- Button trigger modal -->
       <!-- <button
         type="button"
@@ -590,8 +590,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-            
+            <div class="modal-body">s
                 <div class=" form-group">
                   <label for="inputTeamName">Project Title</label>
                   <input
@@ -709,29 +708,6 @@
                     <label class="form-check-label" for="Radio2">YES</label>
                   </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-                data-toggle="modal"
-                data-target="#btnRegisterModal2"
-              >
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Button trigger modal -->
       <!-- <button
         type="button"
@@ -741,36 +717,7 @@
       >
         Launch demo modal 2
       </button> -->
-
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="btnRegisterModal2"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="secondModalLabel"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-dialog-scrollable modal-lg"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="secondModalLabel">
-                REGISTRATION FORM
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-           
-              <div class="modal-body">
+      <!-- Modal -->      
                 <div class=" row">
                   <?php $member = array("Leader's name", "2nd Member Name", "3rd Member Name"); ?>
                   <?php for ($i=0; $i < 3; $i++) { ?>
@@ -818,19 +765,19 @@
                   Close
                 </button>
                 <button
-                  name="btnSubmit"
                   type="submit"
                   class="btn btn-primary"
                   value="submit"
+                  id="submitbutton"
+                  disabled="disabled"
                 >
                   Submit
                 </button>
               </div>
-         
           </div>
         </div>
       </div>
-    </form>
+    </form>   
   </body>
 </html>
 <?php
