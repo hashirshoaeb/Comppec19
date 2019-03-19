@@ -5,6 +5,7 @@
          <!-- Backend Developer: Saad Naeem-->
          <!-- Theme Graphics designer: Moiz Mehmood -->
          <!-- Contact: hashirshoaeb@gmail.com -->
+         <!-- Github: https://github.com/hashirshoaeb/Comppec19 -->
          <!-- Theme Copyrights: © Department of Computer and Software Engineering NUST Collage of Electrical and Mechanical Engineering  -->
     <title>COMPPEC</title>
     <link rel="shortcut icon" href="img/logo.png" />
