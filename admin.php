@@ -11,10 +11,6 @@
 
 <body>
     <form method="post" action="">
-        <div class=" form-group">
-            <label for="inputUsername">Username</label>
-            <input type="text" name="inputUsername" class="form-control" id="inputUsername" placeholder="Username" />
-        </div>
         <div class="form-group">
             <label for="inputPassword">Password</label>
             <input type="password" name="inputPassword" class="form-control" id="inputPassword" />
@@ -29,20 +25,24 @@
 
 <?php
 if(isset($_POST['btnSubmit'])){
-    $username = $_POST['inputUsername'];
     $password = $_POST['inputPassword'];
-    echo "You entered $username and $password";
+    echo "You entered $password";
 
-    // if($username != "Mohammad" or $password != "Allahis1"){
+    // if($password != "Allahis1"){
     //     echo "wrong username or password";
     //     exit;
     // }
     // echo "WELCOME ";
-    $host = '127.0.0.1';
-    $dbname = 'db_comppec19';
-    $username = 'root';
-    $password = '';
+    $host = 'localhost';
+    $dbname = 'comppec_19';
+    $username = 'comppec_c2010';
+    $password = '03wAdl}~G{Bf';
     $conn = null;
+    // $host = '127.0.0.1';
+    // $dbname = 'db_comppec19';
+    // $username = 'root';
+    // $password = '';
+    // $conn = null;
     try {
         $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
         echo "Connected to $dbname at $host successfully.";
@@ -58,21 +58,30 @@ if(isset($_POST['btnSubmit'])){
         exit;
     }
 ?>
-<table class="table">
+<table class="table table-bordered">
     <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Team id</th>
             <th scope="col">Project Title</th>
             <th scope="col">Team Email</th>
+            <th scope="col">Category</th>
             <th scope="col">Member Name</th>
             <th scope="col">Member CNIC</th>
             <th scope="col">Member Phone</th>
+            <th scope="col">Hostel</th>
+            <th scope="col">Payment</th>
+            <th scope="col">Pay btn</th>
         </tr>
     </thead>
     <tbody>
         <?php
     $i = 1;
+    $categoryname = array("", "ELECTROMECHANICAL SYSTEM",
+    "AR/VR & GAMING",
+    "IOT & DIGITAL SYSTEM",
+    "SOFTWARE SYSTEM",
+    "EARLY AGE PROGRAMMING");
     while ($data = $value->fetch()) {
         ?>
         <tr>
@@ -80,9 +89,13 @@ if(isset($_POST['btnSubmit'])){
             <td><?php echo $data['team_id']; ?></td>
             <td><?php echo $data['team_name']; ?></td>
             <td><?php echo $data['team_Email']; ?></td>
+            <td><?php echo $categoryname[$data['team_category']]; ?></td>          
             <td><?php echo $data['member_name']; ?></td>
             <td><?php echo $data['member_CNIC']; ?></td>
             <td><?php echo $data['member_phone']; ?></td>
+            <td><?php echo $data['team_accomodation']; ?></td>
+            <td><?php echo $data['team_payment']; ?></td>
+            <td><button id="<?php echo $data['team_id']; ?>">Paid?</button></td>
         </tr>
         <?php } ?>
     </tbody>
