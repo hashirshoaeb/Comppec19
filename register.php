@@ -466,14 +466,37 @@
          echo '<div class=" alert alert-success display-3 text-center">Registration SUCCESSFULL</div>';
 
          $mailSub = "COMPPEC"; 
-         $mailMsg1 = "Thankyou for registering at COMPPEC'19. We will see you on 19th April, 2019 Inshaa Allah. Enjoy the exhibition and goodluck for the competition \n".
-         "1. The Registration fee is to be submitted in the following bank account: \n".
-         "Account Title: Comdt College of E&ME \n".
-         "A/c No. 3001523067\n".
-         "Br code: 0640\n".
-         "Banker: NBP, EME College Br\n".
-         "2. Due date for the submission of fee is (+5 days of registration). \n".
-         "3. Please send a picture of the payment slip to admin@comppec.com for completion of registeration.\n";
+        $message = '<html>
+<body>
+  <table>
+    <tr>
+     <td>Thankyou for registering at COMPPEC 19.We will see you on 19th April,2019 Inshaa Allah. Enjoy the exhibition and goodluck for the competition</td>
+    </tr>
+    <tr>
+      <td>1.The Registration fee is to be submitted in the following bank account:</td>
+    </tr>
+	<tr>
+      <td>Account Title: Comdt College of E&ME</td>
+    </tr>
+	<tr>
+      <td>A/c No. 3001523067</td>
+    </tr>
+	<tr>
+      <td>Br code: 0640</td>
+    </tr>
+	<tr>
+      <td>Banker: NBP, EME College Br</td>
+    </tr>
+	<tr>
+      <td>2.Due date for the submission of fee is (+5 days of registration)</td>
+    </tr>
+	<tr>
+      <td>3. Please send a picture of the payment slip to admin@comppec.com for completion of registeration</td>
+    </tr>
+  </table>
+</body>
+</html>
+';
          require 'mailAttachments/PHPMailerAutoload.php';
          $mail = new PHPMailer();
          $mail ->IsSmtp();
