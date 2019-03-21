@@ -253,7 +253,7 @@
                 <div class="form-group">
                   <label for="inputCNIC<?php echo $i;?>">CNIC ( *Guardian's CNIC for early age)</label>
                   <input
-                    ty pe="text"
+                    type="text"
                     class="form-control"
                     name="memberCNIC<?php echo $i;?>"
                     id="inputCNIC<?php echo $i;?>"
