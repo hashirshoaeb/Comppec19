@@ -86,7 +86,7 @@
           <form class="needs-validation" novalidate action="" method="post">
             <!-- project title -->
             <div class=" form-group">
-              <label for="inputTeamName">Project Title</label>
+              <label for="inputTeamName">Project Title ( *Team title for early age )</label>
               <input
                 type="text"
                 name="teamName"
@@ -251,9 +251,9 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="inputCNIC<?php echo $i;?>">CNIC</label>
+                  <label for="inputCNIC<?php echo $i;?>">CNIC ( *Guardian's CNIC for early age)</label>
                   <input
-                    type="text"
+                    ty pe="text"
                     class="form-control"
                     name="memberCNIC<?php echo $i;?>"
                     id="inputCNIC<?php echo $i;?>"
