@@ -288,6 +288,43 @@
       </div>
     </div>
     <script>
+      function callmembersValidation() {
+        var members = document.getElementsByName("teamMemberNo");
+        var memberNo = 1;
+        for (let i = 0; i < members.length; i++) {
+          if (members[i].checked) {
+            memberNo = members[i].value;
+          }
+        }
+        for (let i = 0; i < memberNo; i++) {
+          let concdata = "inputMemberName" + i;
+          document
+          .getElementById(concdata)
+          .setAttribute("required", "");
+          document.getElementById(concdata).disabled = false;
+          concdata = "inputCNIC" + i;
+          document
+          .getElementById(concdata)
+          .setAttribute("required", "");
+          document.getElementById(concdata).disabled = false;
+          concdata = "inputPhoneNumber" + i;
+          document
+          .getElementById(concdata)
+          .setAttribute("required", "");
+          document.getElementById(concdata).disabled = false;
+        }
+        for (let i = 2; i >= memberNo; i--) {
+          let concdata = "inputMemberName" + i;
+          document.getElementById(concdata).removeAttribute("required");
+          document.getElementById(concdata).disabled = true;
+          concdata = "inputCNIC" + i;
+          document.getElementById(concdata).removeAttribute("required");
+          document.getElementById(concdata).disabled = true;
+          concdata = "inputPhoneNumber" + i;
+          document.getElementById(concdata).removeAttribute("required");
+          document.getElementById(concdata).disabled = true;
+        }        
+      }
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
         "use strict";
@@ -296,45 +333,12 @@
           function() {
             // Fetch all the forms we want to apply custom Bootstrap validation styles to
             var forms = document.getElementsByClassName("needs-validation");
-
+            console.log("mai ider hoon");
+            callmembersValidation();
             document
               .getElementById("teamNumber")
               .addEventListener("click", function(event) {
-                var members = document.getElementsByName("teamMemberNo");
-                var memberNo = 1;
-                for (let i = 0; i < members.length; i++) {
-                  if (members[i].checked) {
-                    memberNo = members[i].value;
-                  }
-                }
-                for (let i = 0; i < memberNo; i++) {
-                  let concdata = "inputMemberName" + i;
-                  document
-                    .getElementById(concdata)
-                    .setAttribute("required", "");
-                  document.getElementById(concdata).disabled = false;
-                  concdata = "inputCNIC" + i;
-                  document
-                    .getElementById(concdata)
-                    .setAttribute("required", "");
-                  document.getElementById(concdata).disabled = false;
-                  concdata = "inputPhoneNumber" + i;
-                  document
-                    .getElementById(concdata)
-                    .setAttribute("required", "");
-                  document.getElementById(concdata).disabled = false;
-                }
-                for (let i = 2; i >= memberNo; i--) {
-                  let concdata = "inputMemberName" + i;
-                  document.getElementById(concdata).removeAttribute("required");
-                  document.getElementById(concdata).disabled = true;
-                  concdata = "inputCNIC" + i;
-                  document.getElementById(concdata).removeAttribute("required");
-                  document.getElementById(concdata).disabled = true;
-                  concdata = "inputPhoneNumber" + i;
-                  document.getElementById(concdata).removeAttribute("required");
-                  document.getElementById(concdata).disabled = true;
-                }
+                callmembersValidation();
               });
             // Loop over them and prevent submission
             var validation = Array.prototype.filter.call(forms, function(form) {
