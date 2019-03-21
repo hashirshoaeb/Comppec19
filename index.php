@@ -254,23 +254,10 @@
         </div>
         <div class=" col-md-3">
           <a href="">    
-              <img style="width: 18rem; align-content: center;"
-               class=" img-fluid mb-1" src="img/GR.png"></img>
-          </a>
-        </div>
-        
-        
-        <div class=" col-md-3">
-          <a href="">    
               <img style="width: 18rem; align-content: center; padding-top: 60px;"
                class=" img-fluid mt-5" src="img/PS.png"></img>
           </a>
         </div>
-        <div class=" col-md-3">
-          <a href="">    
-              <img style="width: 18rem; align-content: center;padding-top:70px;"
-               class=" img-fluid mb-1" src="img/duce.png"></img>
-          </a>
         </div>
       </div> 
     </div>

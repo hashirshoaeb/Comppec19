@@ -464,7 +464,8 @@
          }         
          // echo "Registration SUCCESSFULL";
          echo '<div class=" alert alert-success display-3 text-center">Registration SUCCESSFULL</div>';
-
+         $nextWeek = time() + (5 * 24 * 60 * 60);
+         $F_date = date("Y-m-d", $nextWeek);
          $mailSub = "COMPPEC"; 
         $message = '<html>
 <body>
@@ -472,8 +473,10 @@
     <tr>
      <td>Thankyou for registering at COMPPEC 19.We will see you on 19th April,2019 Inshaa Allah. Enjoy the exhibition and goodluck for the competition</td>
     </tr>
+    <tr></tr>
+    <tr></tr>
     <tr>
-      <td>1.The Registration fee is to be submitted in the following bank account:</td>
+      <td>1.The Registration fee (Rs 1000 for Project or Rs 200 for Early Age Programming) is to be submitted in the following bank account:</td>
     </tr>
 	<tr>
       <td>Account Title: Comdt College of E&ME</td>
@@ -488,12 +491,21 @@
       <td>Banker: NBP, EME College Br</td>
     </tr>
 	<tr>
-      <td>2.Due date for the submission of fee is (+5 days of registration)</td>
+      <td>2.Due date for the submission of fee is '.$F_date.'</td>
     </tr>
 	<tr>
       <td>3. Please send a picture of the payment slip to admin@comppec.com for completion of registeration</td>
     </tr>
-  </table>
+  <tr>
+      <td>Regards</td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+  <tr></tr>
+  <tr>
+    <td>Team COMPPEC 2019</td>
+  </tr>
+    </table>
 </body>
 </html>
 ';
