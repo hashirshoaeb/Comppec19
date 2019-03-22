@@ -14,7 +14,9 @@
         <div class="form-group">
             <label for="inputPassword">Password</label>
             <input type="password" name="inputPassword" class="form-control" id="inputPassword" />
-        </div>
+          <label for="inputPassword">Teamid</label>
+            <input type="number" name="inputteamid" class="form-control" id="inputteamid" />
+		</div>
         <button name="btnSubmit" type="submit" class="btn btn-primary" value="submit">
             Submit
         </button>
@@ -26,8 +28,9 @@
 <?php
 if(isset($_POST['btnSubmit'])){
     $password = $_POST['inputPassword'];
+    $teamid = $_POST['inputteamid'];
+    $var = 1;
     echo "You entered $password";
-
     // if($password != "Allahis1"){
     //     echo "wrong username or password";
     //     exit;
@@ -53,6 +56,15 @@ if(isset($_POST['btnSubmit'])){
     
     $sql1 = "SELECT * FROM tbl_team LEFT JOIN tbl_member ON tbl_team.team_id = tbl_member.team_id";
     $value = $conn->query($sql1);
+	$exception="select * from tbl_team  where team_id='$teamid'";
+    $num=$con->query($exception)->rowcount();
+    if($num==1){
+	$query="update tbl_team set team_payment='$var' where team_id='$teamid'";
+    $q2=$conn->query($query);
+	}else{
+		$message = "Teamid does not exist Please try the Valid One";
+     echo "<script type='text/javascript'>alert('$message');</script>";  
+	}
     if(empty($value)){
         echo "team id is empty";
         exit;
