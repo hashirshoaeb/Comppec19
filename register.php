@@ -471,11 +471,11 @@
          $nextWeek = time() + (5 * 24 * 60 * 60);
          $F_date = date("Y-m-d", $nextWeek);
          $mailSub = "COMPPEC"; 
-        $message = '<html>
+        $message = "<html>
 <body>
   <table>
     <tr>
-     <td>Thankyou for registering at COMPPEC 19.We will see you on 19th April,2019 Inshaa Allah. Enjoy the exhibition and goodluck for the competition</td>
+     <td>Thankyou for registering at COMPPEC 19.We will see you on 19th April,2019 Inshaa Allah. Enjoy the exhibition and goodluck for the competition.</td>
     </tr>
     <tr></tr>
     <tr></tr>
@@ -495,10 +495,10 @@
       <td>Banker: NBP, EME College Br</td>
     </tr>
 	<tr>
-      <td>2.Due date for the submission of fee is '.$F_date.'</td>
+      <td>2.Due date for the submission of fee is $F_date.</td>
     </tr>
 	<tr>
-      <td>3. Please send a picture of the payment slip to admin@comppec.com for completion of registeration</td>
+      <td>3. Please send a picture of the payment slip to admin@comppec.com for completion of registeration.</td>
     </tr>
   <tr>
       <td>Regards</td>
@@ -512,7 +512,7 @@
     </table>
 </body>
 </html>
-';
+";
          require 'mailAttachments/PHPMailerAutoload.php';
          $mail = new PHPMailer();
          $mail ->IsSmtp();
@@ -527,7 +527,7 @@
          $mail ->SetFrom("admin@comppec.com");
          $mailto = "$teamEmail";
          $mail ->Subject = $mailSub;
-         $mail ->Body = "$mailMsg1";     
+         $mail ->Body = "$message";     
          $mail ->AddAddress($mailto);
          // $mail->AddStringAttachment($doc, 'doc.pdf', 'base64', 'application/pdf');
          // $mail->Send();

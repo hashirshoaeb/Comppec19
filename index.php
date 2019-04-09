@@ -230,15 +230,20 @@
         </div>
       
       <div class=" row justify-content-center">
-        <div class=" col-md-3">
-          <a href="">
-              <img style="width: 18rem;align-content: center;width: 170px;
-                height: 150px;" class=" img-fluid mb-5" src="img/pastic.png"></img>
-          </a>
+      <div class=" col-md-3">
+            <a href="">    
+                <img style="width: 18rem;align-content: center;"
+                 class=" img-fluid mb-5" src="img/MM.jpg"></img>
+            </a>
         </div>
         <div class=" col-md-3">
           <a href="">
               <img style="width: 18rem;" class=" img-fluid mb-5" src="img/HRPL.png"></img>
+          </a>
+        </div>
+        <div class=" col-md-3">
+          <a href="">
+              <img style="padding-top:20px;width: 18rem;" class=" img-fluid mb-5" src="img/Bent.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
@@ -247,10 +252,26 @@
           </a>
         </div>
         <div class=" col-md-3">
-            <a href="">    
-                <img style="width: 18rem;align-content: center;"
-                 class=" img-fluid mb-5" src="img/MM.jpg"></img>
-            </a>
+          <a href="">
+              <img style="width: 18rem;align-content: center;width: 170px;
+                height: 150px;" class=" img-fluid mb-5" src="img/pastic.png"></img>
+          </a>
+        </div>
+        <div class=" col-md-3">
+          <a href="">
+              <img style="width: 18rem;" class=" img-fluid mb-5" src="img/Hino.jpeg"></img>
+          </a>
+        </div>
+        
+        <div class=" col-md-3">
+          <a href="">
+              <img style="width: 18rem;" class=" img-fluid mb-5" src="img/HI.png"></img>
+          </a>
+        </div>
+        <div class=" col-md-3">
+          <a href="">
+              <img style="width: 18rem;" class=" img-fluid mb-5" src="img/Unknown.jpeg"></img>
+          </a>
         </div>
         <div class=" col-md-3">
           <a href="">    
