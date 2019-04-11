@@ -270,13 +270,19 @@
         </div>
         <div class=" col-md-3">
           <a href="">
-              <img style="width: 18rem;" class=" img-fluid mb-5" src="img/Unknown.jpeg"></img>
+              <img style="width: 18rem;" class=" img-fluid mb-5" src="img/ain.png"></img>
           </a>
         </div>
         <div class=" col-md-3">
           <a href="">    
               <img style="width: 18rem; align-content: center; padding-top: 60px;"
                class=" img-fluid mt-5" src="img/PS.png"></img>
+          </a>
+        </div>
+        <div class=" col-md-3">
+          <a href="">    
+              <img style="width: 18rem; align-content: center; padding-top: 60px;"
+               class=" img-fluid mt-5" src="img/Chenab.png"></img>
           </a>
         </div>
         </div>
@@ -304,7 +310,7 @@
                 <span style="font-size: 2em; color: black;">
                   <i class="fas fa-phone-square fa-xs"></i>
                 </span>
-                <a style="text-decoration: none;" class=" text-dark" href="tel:+(92)323-536-4441"> +(92)323-536-4441</a>
+                <a style="text-decoration: none;" class=" text-dark" href="tel:+(92)323-536-4443"> +(92)323-536-4443</a>
               </p>
               <p>
                 <span style="font-size: 2em; color: black;">
