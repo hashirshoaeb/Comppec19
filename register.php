@@ -86,7 +86,7 @@
           <form class="needs-validation" novalidate action="" method="post">
             <!-- project title -->
             <div class=" form-group">
-              <label for="inputTeamName">Project Title ( *Team title for early age )</label>
+              <label for="inputTeamName">Project Title ( *Team title for Early Age )</label>
               <input
                 type="text"
                 name="teamName"
@@ -131,11 +131,13 @@
             </div>
             <!-- project discreption -->
             <div class="form-group">
-              <label for="inputProjectDetails">Describe your project</label>
+              <label for="inputProjectDetails">Describe your project (*max characters allowed are 500)</label>
               <textarea
                 class="form-control"
                 name="teamProjectDetails"
                 id="inputProjectDetails"
+                placeholder="enter a short description of your project"
+                maxlength=510
                 required
               ></textarea>
               <div class="invalid-feedback">
@@ -422,10 +424,10 @@
        }
        
        // connection
-       $host = '127.0.0.1';
-       $dbname = 'db_comppec19';
-       $username = 'root';
-       $password = '';
+       $host = 'localhost';
+       $dbname = 'comppec_19';
+       $username = 'comppec_c2010';
+       $password = '03wAdl}~G{Bf';
        $conn = null;
        try {
          $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -448,7 +450,7 @@
          exit;
        }
        
-       $sql1 = "SELECT team_id FROM tbl_team WHERE team_name = '$teamName' and team_Email = '$teamEmail'";
+       $sql1 = "SELECT team_id FROM tbl_team WHERE team_Email = '$teamEmail'";
        $teamid = $conn->query($sql1)->fetch();
        if(empty($teamid)){
          errAlert ("team id is empty");
@@ -462,7 +464,7 @@
            $sql2 = "INSERT INTO tbl_member (member_name, member_CNIC, member_phone, team_id) VALUES ('$memberNames[$i]','$memberCNICs[$i]','$memberPhones[$i]', $team_id)";
            if(!$conn->query($sql2)){
              errAlert("Inserting Members sql2 query NOT successful");
-             $sql3 = "DELETE FROM tbl_team WHERE team_Email ='$teamEmail'";
+            //  $sql3 = "DELETE FROM tbl_team WHERE team_Email ='$teamEmail'";
              exit;
            }
          }         
@@ -475,15 +477,20 @@
 <body>
   <table>
     <tr>
-     <td>Thankyou for registering at COMPPEC 19.We will see you on 19th April,2019 Inshaa Allah. Enjoy the exhibition and goodluck for the competition.</td>
+     <td>Thank you for registering at COMPPEC 19! We will see you on 19th April, 2019 In shaa Allah. Enjoy the exhibition and good luck for the competition.</td>
     </tr>
     <tr></tr>
     <tr></tr>
+    <tr></tr>
+    
+    <tr><td><b>Instructions for Registration:</b></td></tr>
+    <tr></tr>    
     <tr>
-      <td>1.The Registration fee (Rs 1000 for Project or Rs 200 for Early Age Programming) is to be submitted in the following bank account:</td>
+      <td>1. The Registration fee (Rs 1000 for Project or Rs 200 for Early Age Programming) is to be submitted in the following bank account:</td>
     </tr>
+    <tr></tr>
 	<tr>
-      <td>Account Title: Comdt College of E&ME</td>
+      <td>Account Title: Commandant College of E&ME</td>
     </tr>
 	<tr>
       <td>A/c No. 3001523067</td>
@@ -492,19 +499,22 @@
       <td>Br code: 0640</td>
     </tr>
 	<tr>
-      <td>Banker: NBP, EME College Br</td>
+      <td>Bank: National Bank Pakistan, EME College Branch</td>
     </tr>
+    <tr></tr>
 	<tr>
-      <td>2.Due date for the submission of fee is $F_date.</td>
+      <td>2. Due date for the submission of fee is $F_date.</td>
     </tr>
+    <tr></tr>
 	<tr>
       <td>3. Please send a picture of the payment slip to admin@comppec.com for completion of registeration.</td>
     </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
   <tr>
       <td>Regards</td>
   </tr>
-  <tr></tr>
-  <tr></tr>
   <tr></tr>
   <tr>
     <td>Team COMPPEC 2019</td>
@@ -534,7 +544,7 @@
          if(!$mail->Send()) {
           //  echo 'Message could not be sent.';
            echo '<div class=" alert alert-danger display-3 text-center">Mail could not be sent.</div>';
-          //  echo 'Mailer Error: ' . $mail->ErrorInfo;
+          echo 'Mailer Error: ' . $mail->ErrorInfo;
            exit;
         }        
         echo '<div class=" alert alert-info display-5 text-center">Message has been sent, check your mail.</div>';       
