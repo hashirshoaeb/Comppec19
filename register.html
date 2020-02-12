@@ -22,10 +22,10 @@
       rel="stylesheet"
     />
     <style>
-    body {
-        background: #343434;       
-      } 
-    .ball {
+      body {
+        background: #343434;
+      }
+      .ball {
         position: absolute;
         border-radius: 100%;
         opacity: 0.7;
@@ -51,7 +51,7 @@
     ></script>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="./index.php#Home">COMPPEC'19</a>
+      <a class="navbar-brand" href="./index.html#Home">COMPPEC'19</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -65,15 +65,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="./index.php#Home"
+          <a class="nav-item nav-link active" href="./index.html#Home"
             >Home <span class="sr-only">(current)</span></a
           >
-          <a class="nav-item nav-link" href="./index.php#Categories">Categories</a>
-          <a class="nav-item nav-link" href="./index.php#Prizes">Prizes</a>
-          <a class="nav-item nav-link" href="./Schedule.html#Schedule">Schedule</a>
-          <a class="nav-item nav-link" href="./Schedule.html#Symposium">Symposium</a>
+          <a class="nav-item nav-link" href="./index.html#Categories"
+            >Categories</a
+          >
+          <a class="nav-item nav-link" href="./index.html#Prizes">Prizes</a>
+          <a class="nav-item nav-link" href="./Schedule.html#Schedule"
+            >Schedule</a
+          >
+          <a class="nav-item nav-link" href="./Schedule.html#Symposium"
+            >Symposium</a
+          >
           <a class="nav-item nav-link" href="./register.php">Register</a>
-          <a class="nav-item nav-link" href="./index.php#Contact">Contact</a>
+          <a class="nav-item nav-link" href="./index.html#Contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -86,7 +92,9 @@
           <form class="needs-validation" novalidate action="" method="post">
             <!-- project title -->
             <div class=" form-group">
-              <label for="inputTeamName">Project Title ( *Team title for Early Age )</label>
+              <label for="inputTeamName"
+                >Project Title ( *Team title for Early Age )</label
+              >
               <input
                 type="text"
                 name="teamName"
@@ -131,13 +139,15 @@
             </div>
             <!-- project discreption -->
             <div class="form-group">
-              <label for="inputProjectDetails">Describe your project (*max characters allowed are 500)</label>
+              <label for="inputProjectDetails"
+                >Describe your project (*max characters allowed are 500)</label
+              >
               <textarea
                 class="form-control"
                 name="teamProjectDetails"
                 id="inputProjectDetails"
                 placeholder="enter a short description of your project"
-                maxlength=510
+                maxlength="510"
                 required
               ></textarea>
               <div class="invalid-feedback">
@@ -237,45 +247,110 @@
             <!-- members info -->
             <hr class=" m-5" />
             <div class=" row">
-              <?php $member = array("Leader's name", "2nd Member Name", "3rd Member Name"); ?>
-              <?php for ($i=0; $i < 3; $i++) { ?>
               <div class=" col-md-4">
                 <div class="form-group">
-                  <label for="inputMemberName<?php echo $i;?>"
-                    ><?php echo($member[$i]); ?></label
-                  >
+                  <label for="inputMemberName0">Leader's name</label>
                   <input
                     type="text"
                     class="form-control"
-                    name="memberName<?php echo $i;?>"
-                    id="inputMemberName<?php echo $i;?>"
+                    name="memberName0"
+                    id="inputMemberName0"
                     placeholder="Name"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="inputCNIC<?php echo $i;?>">CNIC ( *Guardian's CNIC for early age)</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="memberCNIC<?php echo $i;?>"
-                    id="inputCNIC<?php echo $i;?>"
-                    placeholder="00000-0000000-0"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="inputPhoneNumber<?php echo $i;?>"
-                    >Phone Number</label
+                  <label for="inputCNIC0"
+                    >CNIC ( *Guardian's CNIC for early age)</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    name="memberPhone<?php echo $i;?>"
-                    id="inputPhoneNumber<?php echo $i;?>"
+                    name="memberCNIC0"
+                    id="inputCNIC0"
+                    placeholder="00000-0000000-0"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputPhoneNumber0">Phone Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="memberPhone0"
+                    id="inputPhoneNumber0"
                     placeholder="0000-0000000"
                   />
                 </div>
               </div>
-              <?php } ?>
+              <!-- ////////////////// -->
+              <div class=" col-md-4">
+                <div class="form-group">
+                  <label for="inputMemberName1">2nd Member Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="memberName1"
+                    id="inputMemberName1"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputCNIC1"
+                    >CNIC ( *Guardian's CNIC for early age)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="memberCNIC1"
+                    id="inputCNIC1"
+                    placeholder="00000-0000000-0"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputPhoneNumber1">Phone Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="memberPhone1"
+                    id="inputPhoneNumber1"
+                    placeholder="0000-0000000"
+                  />
+                </div>
+              </div>
+              <!-- ///////////////////// -->
+              <div class=" col-md-4">
+                <div class="form-group">
+                  <label for="inputMemberName2">3rd Member Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="memberName2"
+                    id="inputMemberName2"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputCNIC2"
+                    >CNIC ( *Guardian's CNIC for early age)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="memberCNIC2"
+                    id="inputCNIC2"
+                    placeholder="00000-0000000-0"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputPhoneNumber2">Phone Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="memberPhone2"
+                    id="inputPhoneNumber2"
+                    placeholder="0000-0000000"
+                  />
+                </div>
+              </div>
             </div>
             <button
               name="btnSubmit"
@@ -300,19 +375,13 @@
         }
         for (let i = 0; i < memberNo; i++) {
           let concdata = "inputMemberName" + i;
-          document
-          .getElementById(concdata)
-          .setAttribute("required", "");
+          document.getElementById(concdata).setAttribute("required", "");
           document.getElementById(concdata).disabled = false;
           concdata = "inputCNIC" + i;
-          document
-          .getElementById(concdata)
-          .setAttribute("required", "");
+          document.getElementById(concdata).setAttribute("required", "");
           document.getElementById(concdata).disabled = false;
           concdata = "inputPhoneNumber" + i;
-          document
-          .getElementById(concdata)
-          .setAttribute("required", "");
+          document.getElementById(concdata).setAttribute("required", "");
           document.getElementById(concdata).disabled = false;
         }
         for (let i = 2; i >= memberNo; i--) {
@@ -325,7 +394,7 @@
           concdata = "inputPhoneNumber" + i;
           document.getElementById(concdata).removeAttribute("required");
           document.getElementById(concdata).disabled = true;
-        }        
+        }
       }
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
@@ -361,226 +430,47 @@
         );
       })();
     </script>
-    <?php   
-    if(isset($_POST['btnSubmit'])){
-      // taking input to variables
-      $teamName = $_POST['teamName'];
-      $teamEmail = $_POST['teamEmail'];
-      $teamcategory = $_POST['teamcategory'];
-      $teamProjectDetails = $_POST["teamProjectDetails"];
-      $teamMemberNo = $_POST['teamMemberNo'];
-      $teamInstituteName = $_POST["teamInstituteName"];
-      $teamCityName = $_POST["teamCityName"];
-      $teamAccomodation = $_POST["teamAccomodation"];
-      $memberNames = array();
-      $memberCNICs = array();
-      $memberPhones = array();
-      
-      for ($i=0; $i < $teamMemberNo; $i++) { 
-        array_push($memberNames, $_POST['memberName'.$i]);
-        array_push($memberCNICs, $_POST['memberCNIC'.$i]);
-        array_push($memberPhones, $_POST['memberPhone'.$i]);
-       }
-       
-       
-       // // incomplete form validation
-       function errAlert($msg) {
-        //  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-        echo '<div class=" alert alert-danger display-3 text-center">"' . $msg . '"</div>';
-       }
-       if(empty($teamName)){
-         errAlert("You have not entered team name in form. Registration Failed");
-         exit; 
-       }
-       if(empty($teamEmail)){
-         errAlert("You have not entered team Email in form. Registration Failed");
-         exit; 
-       }
-       if(empty($teamcategory)){
-         errAlert("You have not selected team category in form. Registration Failed");
-         exit;
-       }
-       if(empty($teamMemberNo)){
-         errAlert("You have not selected number of team members in form. Registration Failed");
-         exit;
-       }
-       if(empty($teamInstituteName)){
-         errAlert("You have not entered your institute name in form. Registration Failed");
-         exit;
-       }
-       if(empty($teamCityName)){
-         errAlert("You have not entered your city name in form. Registration Failed");
-         exit;
-       }
-       
-       for ($i=0; $i < 3; $i++) { 
-         if($teamMemberNo == $i + 1){
-           $chr = array("first", "second", "third");
-           if(empty($memberNames[$i]) || empty($memberCNICs[$i]) || empty($memberPhones[$i])){
-             errAlert("Please input data for " . $chr[$i] . " team member. Registration Failed");
-             exit;
-           }
-         }
-       }
-       
-       // connection
-       $host = 'localhost';
-       $dbname = 'comppec_19';
-       $username = 'comppec_c2010';
-       $password = '03wAdl}~G{Bf';
-       $conn = null;
-       try {
-         $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-         // echo "Connected to $dbname at $host successfully.";
-       } catch (PDOException $pe) {
-         die("Could not connect to the database $dbname :" . $pe->getMessage());
-         exit;
-       }
-       
-       $sql0 = "SELECT team_id FROM tbl_team WHERE team_Email = '$teamEmail'";
-       $teamid = $conn->query($sql0)->fetch();
-       if(isset($teamid['team_id'])){
-         errAlert("team already registered");
-         exit;
-       }
-       
-       $sql = "INSERT INTO tbl_team (team_name, team_Email, team_category, team_projectDetail, no_of_members, team_istitute, team_city, team_accomodation) VALUES ('$teamName','$teamEmail',$teamcategory,'$teamProjectDetails',$teamMemberNo, '$teamInstituteName', '$teamCityName', $teamAccomodation)";
-       if(!$conn->query($sql)){
-         errAlert("Inserting team sql query NOT successful");
-         exit;
-       }
-       
-       $sql1 = "SELECT team_id FROM tbl_team WHERE team_Email = '$teamEmail'";
-       $teamid = $conn->query($sql1)->fetch();
-       if(empty($teamid)){
-         errAlert ("team id is empty");
-         exit;
-       }
-       //while ($teamid = $value->fetch()) {
-         //   echo $teamid['team_id'] ."hahah";
-         //}
-         $team_id = $teamid['team_id'];
-         for ($i=0; $i < $teamMemberNo; $i++) { 
-           $sql2 = "INSERT INTO tbl_member (member_name, member_CNIC, member_phone, team_id) VALUES ('$memberNames[$i]','$memberCNICs[$i]','$memberPhones[$i]', $team_id)";
-           if(!$conn->query($sql2)){
-             errAlert("Inserting Members sql2 query NOT successful");
-            //  $sql3 = "DELETE FROM tbl_team WHERE team_Email ='$teamEmail'";
-             exit;
-           }
-         }         
-         // echo "Registration SUCCESSFULL";
-         echo '<div class=" alert alert-success display-3 text-center">Registration SUCCESSFULL</div>';
-         $nextWeek = time() + (5 * 24 * 60 * 60);
-         $F_date = date("Y-m-d", $nextWeek);
-         $mailSub = "COMPPEC"; 
-        $message = "<html>
-<body>
-  <table>
-    <tr>
-     <td>Thank you for registering at COMPPEC 19! We will see you on 19th April, 2019 In shaa Allah. Enjoy the exhibition and good luck for the competition.</td>
-    </tr>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
-    
-    <tr><td><b>Instructions for Registration:</b></td></tr>
-    <tr></tr>    
-    <tr>
-      <td>1. The Registration fee (Rs 1000 for Project or Rs 200 for Early Age Programming) is to be submitted in the following bank account:</td>
-    </tr>
-    <tr></tr>
-	<tr>
-      <td>Account Title: Commandant College of E&ME</td>
-    </tr>
-	<tr>
-      <td>A/c No. 3001523067</td>
-    </tr>
-	<tr>
-      <td>Br code: 0640</td>
-    </tr>
-	<tr>
-      <td>Bank: National Bank Pakistan, EME College Branch</td>
-    </tr>
-    <tr></tr>
-	<tr>
-      <td>2. Due date for the submission of fee is $F_date.</td>
-    </tr>
-    <tr></tr>
-	<tr>
-      <td>3. Please send a picture of the payment slip to admin@comppec.com for completion of registeration.</td>
-    </tr>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
-  <tr>
-      <td>Regards</td>
-  </tr>
-  <tr></tr>
-  <tr>
-    <td>Team COMPPEC 2019</td>
-  </tr>
-    </table>
-</body>
-</html>
-";
-         require 'mailAttachments/PHPMailerAutoload.php';
-         $mail = new PHPMailer();
-         $mail ->IsSmtp();
-         $mail ->SMTPDebug = 0;
-         $mail ->SMTPAuth = true;
-         $mail ->SMTPSecure = 'ssl';
-         $mail ->Host = "mail.comppec.com";
-         $mail ->Port = 465; // or 587
-         $mail ->IsHTML(true);
-         $mail ->Username = "admin@comppec.com";
-         $mail ->Password = "Xj362Iw3kb";
-         $mail ->SetFrom("admin@comppec.com");
-         $mailto = "$teamEmail";
-         $mail ->Subject = $mailSub;
-         $mail ->Body = "$message";     
-         $mail ->AddAddress($mailto);
-         // $mail->AddStringAttachment($doc, 'doc.pdf', 'base64', 'application/pdf');
-         // $mail->Send();
-         if(!$mail->Send()) {
-          //  echo 'Message could not be sent.';
-           echo '<div class=" alert alert-danger display-3 text-center">Mail could not be sent.</div>';
-          echo 'Mailer Error: ' . $mail->ErrorInfo;
-           exit;
-        }        
-        echo '<div class=" alert alert-info display-5 text-center">Message has been sent, check your mail.</div>';       
-    }   
-    ?>
-    <footer style="background-color: #f5f5f5;" class=" mt-auto py-3 text-center">
-      <strong>&copy; 2019 </strong> Department of Computer and Software Engineering NUST Collage of Electrical and Mechanical Engineering 
+
+    <footer
+      style="background-color: #f5f5f5;"
+      class=" mt-auto py-3 text-center"
+    >
+      <strong>&copy; 2019 </strong> Department of Computer and Software
+      Engineering NUST Collage of Electrical and Mechanical Engineering
     </footer>
     <script>
       // Some random colors
-      const colors = [ "#08adb4","#f6b519", "#ffffff"];
-      
+      const colors = ["#08adb4", "#f6b519", "#ffffff"];
+
       const numBalls = 100;
       const balls = [];
-      
+
       for (let i = 0; i < numBalls; i++) {
         let ball = document.createElement("div");
         ball.classList.add("ball");
-        ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+        ball.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
         ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
         ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
         ball.style.transform = `scale(${Math.random()})`;
         ball.style.width = `${Math.random()}em`;
         ball.style.height = ball.style.width;
-        
+
         balls.push(ball);
         document.body.append(ball);
       }
-      
+
       // Keyframes
       balls.forEach((el, i, ra) => {
         let to = {
-          x: Math.random() * (i % 2 === 0 ? (Math.random() * (-20-(0)) + (0)) : (Math.random() * (0-(20)) + (20))),
-          y: Math.random() * (Math.random() * (20-(-20)) + (-20))
+          x:
+            Math.random() *
+            (i % 2 === 0
+              ? Math.random() * (-20 - 0) + 0
+              : Math.random() * (0 - 20) + 20),
+          y: Math.random() * (Math.random() * (20 - -20) + -20)
         };
-        
+
         let anim = el.animate(
           [
             { transform: "translate(0, 0)" },
@@ -593,9 +483,8 @@
             iterations: Infinity,
             easing: "ease-in-out"
           }
-          );
-        });
-        
+        );
+      });
     </script>
   </body>
 </html>
