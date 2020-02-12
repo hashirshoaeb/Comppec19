@@ -28,22 +28,7 @@ if(isset($_POST['btnSubmit'])){
     $password = $_POST['inputPassword'];
     echo "You entered $password";
 
-    // if($password != "Allahis1"){
-    //     echo "wrong username or password";
-    //     exit;
-    // }
-    // echo "WELCOME ";
-    // include './config.php'
-    $host = 'localhost';
-    $dbname = 'comppec_19';
-    $username = 'comppec_c2010';
-    $password = '03wAdl}~G{Bf';
-    $conn = null;
-    // $host = '127.0.0.1';
-    // $dbname = 'db_comppec19';
-    // $username = 'root';
-    // $password = '';
-    // $conn = null;
+    
     try {
         $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
         echo "Connected to $dbname at $host successfully.";
