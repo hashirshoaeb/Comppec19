@@ -33,6 +33,7 @@ if(isset($_POST['btnSubmit'])){
     //     exit;
     // }
     // echo "WELCOME ";
+    // include './config.php'
     $host = 'localhost';
     $dbname = 'comppec_19';
     $username = 'comppec_c2010';
